@@ -1,0 +1,97 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 10%, #1d294f, #090b16 60%);
+}
+
+.app-bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-title {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  letter-spacing: 0.5rem;
+  color: #a5ccff;
+  text-shadow: 0 0 18px #5aa8ff;
+}
+
+.widget {
+  position: absolute;
+  width: 360px;
+  backdrop-filter: blur(16px);
+  background: rgba(195, 225, 255, 0.08);
+  border: 1px solid rgba(180, 212, 255, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.widget-header {
+  cursor: move;
+  user-select: none;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #dbecff;
+  border-bottom: 1px solid rgba(180, 212, 255, 0.15);
+}
+
+.widget-content {
+  padding: 14px;
+}
+
+.blob-shell {
+  display: grid;
+  place-items: center;
+  height: 260px;
+}
+
+.blob {
+  background: radial-gradient(circle at 30% 30%, #9ed4ff, #4894ff 60%, #2250a0);
+  box-shadow: 0 0 35px #4885ff;
+  transition: all 120ms ease-out;
+}
+
+.terminal {
+  height: 260px;
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86rem;
+  color: #d5e9ff;
+}
+
+.terminal p {
+  margin: 0 0 8px;
+}
+
+.status-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 8px;
+  background: #6f7797;
+}
+
+.dot.active {
+  background: #53ff95;
+  box-shadow: 0 0 10px #53ff95;
+}
